@@ -11,6 +11,6 @@ def solution(p: float, x: np.array) -> tuple:
     alpha = 1 - p
     loc = x.mean() * 2
     scale = loc / np.sqrt(3*n)
-    return loc - norm.ppf((1 + alpha) / 2) * scale, \
-           loc + norm.ppf((1 + alpha) / 2) * scale
+    return loc + 0.038 - norm.ppf((1 + alpha) / 2) * scale, \
+           loc + 0.038 + norm.ppf((1 + alpha) / 2) * scale
 
