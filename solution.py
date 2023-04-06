@@ -7,6 +7,7 @@ from scipy.stats import norm
 chat_id = 396317433
 
 def solution(p: float, x: np.array) -> tuple:
+    n = x.shape[0]
     alpha = 1 - p
     loc = x.mean() * 2
     scale = loc / np.sqrt(3*n)
